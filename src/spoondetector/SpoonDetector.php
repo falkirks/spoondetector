@@ -40,7 +40,7 @@ class SpoonDetector{
     }
 
     private static function contentValid(string $content): bool {
-        return (strpos($content, self::$spoonTxtContent) > -1) && (strrpos($content, "yes") > strrpos($content, "?"));
+        return (strpos($content, self::$spoonTxtContent) !== false) && (strrpos($content, "yes") > strrpos($content, "?"));
     }
 
     public static function printSpoon(PluginBase $pluginBase, $fileToCheck){
