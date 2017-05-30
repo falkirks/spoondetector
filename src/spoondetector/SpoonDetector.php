@@ -43,7 +43,7 @@ class SpoonDetector{
         return (strpos($content, self::$spoonTxtContent) !== false) && (strrpos($content, "yes") > strrpos($content, "?"));
     }
 
-    public static function printSpoon(PluginBase $pluginBase, $fileToCheck){
+    public static function printSpoon(PluginBase $pluginBase, $fileToCheck = "spoon.txt"){
         if(self::isThisSpoon()){
             if(!file_exists($pluginBase->getDataFolder() . $fileToCheck)){
                 file_put_contents($pluginBase->getDataFolder() . $fileToCheck, self::$spoonTxtContent);
