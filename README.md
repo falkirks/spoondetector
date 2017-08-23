@@ -9,3 +9,13 @@ To install this into your plugin you can copy the SpoonDetector class and change
 SpoonDetector::printSpoon($this, 'spoon.txt');
 ```
 
+
+## What I think about spoons
+Spoons are great. However, Spoons do not help the PocketMine community or our open source philosophy, they fragment it. Everyone who uses this library (myself included) is happy for spoon users to use their plugin, they just want to make it clear that they don't have the time to provide support.
+
+
+## A note to spoon developers
+
+* SpoonDetector is not a "spoon blocker", it will never prevent a plugin from being used on your server.
+* SpoonDetector will continue to work regardless of silly reflection hacks you put in place. If you use reflection hacks, you decrease the quality of your software (and mine, but mine is just a hack anyway) and make yourself look silly and childish. So don't do it. 
+* If you are a "good spoon" (which I have yet to see), I am willing to remove the detection note. However, you must use entirely independent API versions from PocketMine so that unsupported plugins will not load. Once you do this, create an issue here and I will exempt you.
