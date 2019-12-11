@@ -83,7 +83,7 @@ final class SpoonDetector{
             if(!self::contentValid(file_get_contents($pluginBase->getDataFolder() . $fileToCheck))) {
                 $pluginBase->getLogger()->info(self::$subtleAsciiSpoon);
                 $pluginBase->getLogger()->warning("You are attempting to run " . $pluginBase->getDescription()->getName() . " on a SPOON!");
-                $pluginBase->getLogger()->warning("Before using the plugin you will need to open /plugins/" . $pluginBase->getDescription()->getName() . "/" . $fileToCheck . " in a text editor and agree to the terms.");
+                $pluginBase->getLogger()->warning("Before using the plugin you will need to open /plugin_data/" . $pluginBase->getDescription()->getName() . "/" . $fileToCheck . " in a text editor and agree to the terms.");
                 $pluginBase->getServer()->getPluginManager()->disablePlugin($pluginBase);
                 return false;
             }
